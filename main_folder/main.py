@@ -18,6 +18,7 @@ SSL_MODE = 'require'
 API_KEY, API_SECRET = os.getenv("API_KEY",""), os.getenv("API_SECRET","")
 SCHEMA, TABLE, SYMBOL = "crypto", "perp_metrics_1m", os.getenv("SYMBOL","BTCUSDT")
 
+
 # Crear el "motor" de SQLAlchemy para conectar con la base de datos
 try:
     db_url = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
