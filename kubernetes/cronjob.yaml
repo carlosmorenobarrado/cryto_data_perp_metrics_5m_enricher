@@ -1,10 +1,10 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: main-process-cronjob
+  name: enrich-cronjob
   namespace: default # O el namespace que uses con ArgoCD
   labels:
-    app: main-process
+    app: enrich
 spec:
   schedule: "*/5 * * * *" # O tu horario deseado
   jobTemplate:
@@ -12,8 +12,8 @@ spec:
       template:
         spec:
           containers:
-          - name: main-process
-            image: carlosmoreno7/main-process:latest
+          - name: enrich
+            image: carlosmoreno7/enrich:latest
             imagePullPolicy: Always
           restartPolicy: OnFailure
   successfulJobsHistoryLimit: 3

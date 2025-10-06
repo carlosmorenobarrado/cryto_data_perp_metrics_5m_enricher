@@ -29,4 +29,4 @@ jobs:
         with:
           context: main_folder/
           push: true # Indica que la imagen debe ser subida
-          tags: carlosmoreno7/main-process:latest 
+          tags: carlosmoreno7/enrich:latest 
